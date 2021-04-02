@@ -70,8 +70,6 @@ img {
 
 .logo {
   display: block;
-  font-family: Montserrat;
-  font-style: normal;
   font-weight: 800;
   font-size: 26px;
   line-height: 1.23;
@@ -80,7 +78,8 @@ img {
 }
 
 .logo_icon {
-  margin: 0 4px;
+  width: 22px;
+  height: 30px;
   -webkit-transform: translateY(15%);
           transform: translateY(15%);
 }
@@ -88,9 +87,7 @@ img {
 .logo_text {
   margin-top: 5px;
   margin-bottom: 0;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 8px;
   line-height: 1.25;
   letter-spacing: 0.18em;

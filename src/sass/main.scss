@@ -1,5 +1,30 @@
-@import './components/example';
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+// Стили для файла с примером HTML-фрагмента
+
+// если вам нужно добавить новый паршал - пишите Маше :)
+
 @import './utils/variables';
-@import './base/defaults';
-@import './utils/mixins.scss';
-@import './base/common.scss';
+@import './utils/mixins';
+
+@import './components/defaults';
+// @import './components/example';
+
+@import './base/common';
+@import './base/logo';
+
+@import './components/site-header';
+@import './components/hero-section';
+@import './components/advantages-section';
+@import './components/problems-section';
+@import './components/how-we-do-section';
+@import './components/program-section';
+@import './components/benefits-section';
+@import './components/about-section';
+@import './components/guarantee-section';
+@import './components/reviews-section';
+@import './components/contacts-section';
+@import './components/site-footer';

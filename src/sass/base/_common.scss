@@ -1,0 +1,29 @@
+.gereral-section-title {
+  font-weight: 900;
+  font-size: 26px;
+  padding-top: 65px;
+  padding-bottom: 30px;
+  @media screen and (min-width: 1281px) {
+    font-size: 46px;
+  }
+}
+
+.container {
+  border: 2px solid tomato;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media screen and (min-width: 481px) {
+    max-width: 738px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media screen and (min-width: 769px) {
+    max-width: 1394px;
+  }
+  @media screen and (min-width: 1281px) {
+    max-width: 1680px;
+  }
+}

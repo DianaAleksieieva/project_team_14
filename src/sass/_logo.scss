@@ -1,0 +1,29 @@
+.logo {
+  display: block;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.23;
+  letter-spacing: 0.04em;
+  color: var(--black-color);
+}
+.logo_icon {
+  margin: 0 4px;
+  transform: translateY(15%);
+}
+.logo_text {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8px;
+  line-height: 1.25;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--black-color);
+}
+.logo_text--orange {
+  color: var(--orange-color);
+}

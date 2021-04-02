@@ -19,11 +19,15 @@
     max-width: 738px;
     padding-left: 40px;
     padding-right: 40px;
-  }
-  @media screen and (min-width: 769px) {
-    max-width: 1394px;
-  }
-  @media screen and (min-width: 1281px) {
-    max-width: 1680px;
+
+    @media screen and (min-width: 481px) {
+      max-width: 768px;
+    }
+    @media screen and (min-width: 769px) {
+      max-width: 1394px;
+    }
+    @media screen and (min-width: 1281px) {
+      max-width: 1680px;
+    }
   }
 }

@@ -1,28 +1,37 @@
 .hero {
   position: relative;
+}
+
+.hero-container {
+  padding-top: 110px;
+  padding-bottom: 47px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 171px;
+    padding-bottom: 65px;
+  }
+
+  @media screen and (min-width: 1394px) {
+    padding-top: 150px;
+    padding-bottom: 10px;
+  }
 
   background-image: url(../images/hero-1.png);
   background-size: 768px;
   background-repeat: no-repeat;
   background-position: bottom 0 left -94px;
 
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/hero-1@2x.png);
+  }
+
   @media screen and (min-width: 768px) {
     background-size: 768px;
+    background-position: bottom 0 left 0;
   }
+
   @media screen and (min-width: 1394px) {
     background-size: 1688px;
-  }
-}
-
-.hero-container {
-  padding-top: 110px;
-  padding-bottom: 47px;
-  @media screen and (min-width: 768px) {
-    padding-top: 158px;
-  }
-  @media screen and (min-width: 1394px) {
-    padding-top: 228px;
-    padding-bottom: 10px;
   }
 }
 
@@ -66,11 +75,7 @@
     color: var(--black-color);
   }
   &--orange {
-    color: var(--second--color);
-    margin-bottom: 30px;
-    @media screen and (min-width: 1394px) {
-      margin-bottom: 0;
-    }
+    color: var(--second-color);
   }
 
   @media screen and (min-width: 1394px) {
@@ -79,13 +84,6 @@
     display: inline-block;
   }
 }
-
-// .hero__text-wrapper {
-//   @media screen and (min-width: 1394px) {
-//     display: block;
-//     margin-bottom: 40px;
-//   }
-// }
 
 .hero__btn {
   display: block;
@@ -105,7 +103,7 @@
   max-width: 260px;
 
   color: #ffffff;
-  background-color: var(--second--color);
+  background-color: var(--second-color);
 
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
@@ -117,7 +115,7 @@
     font-size: 14px;
     line-height: 1.214;
     letter-spacing: 0.14em;
-    padding: 26px;
+    padding: 27px 25px;
     max-width: 354px;
   }
 }
@@ -132,8 +130,9 @@
   }
 
   @media screen and (min-width: 1394px) {
-    max-width: 700px;
+    max-width: 675px;
   }
+
   @media screen and (min-width: 1698px) {
     max-width: 842px;
   }
@@ -150,6 +149,9 @@
   display: flex;
   flex-direction: column;
 
+  @media screen and (min-width: 768px), (max-width: 1394px) {
+    margin-top: -15px;
+  }
   @media screen and (min-width: 1394px) {
     min-width: 642px;
   }

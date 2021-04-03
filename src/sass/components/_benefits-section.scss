@@ -46,6 +46,10 @@
     padding-left: 30px;
     @media screen and (min-width: 768px) {
       display: flex;
+      flex-wrap: wrap;
+      padding-top: 30px;
+      padding-left: 98px;
+      padding-right: auto;
     }
     @media screen and (min-width: 1394px) {
       font-size: 20px;
@@ -56,8 +60,14 @@
       display: block;
       padding-top: 20px;
     }
+   
   }
-
+  &__counter-item:not(:last-child) {
+    padding-right: 20px;
+    @media screen and (min-width: 1394px) {
+      padding-right: 40px;
+    }
+  }
   &__counter-item::before {
     color: var(--second-color);
     counter-increment: section;

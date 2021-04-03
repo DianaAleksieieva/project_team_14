@@ -109,7 +109,7 @@
         <symbol id="icon-vector" viewBox="0 0 2 32">
             <path fill="none" stroke="var(--color1, #b9b9b9)" stroke-width=".8" d="M.8 0v32" />
         </symbol>
-        <symbol id="icon-menu" viewBox="0 0 32 32">
+        <symbol id="icon-menu" viewBox="10 10 12 12">
             <path d="M6.4 11.734V9.6h19.2v2.134H6.4zm0 5.332h19.2v-2.133H6.4v2.133zm0 5.334h19.2v-2.134H6.4V22.4z" />
         </symbol>
     </defs>

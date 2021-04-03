@@ -2,7 +2,6 @@
   background-color: var(--white-color);
   color: var(--black-color);
   padding-top: 40px;
-  padding-bottom: 50px;
 }
 .about__title {
   margin-bottom: 20px;
@@ -32,6 +31,7 @@
   border-top: 1px solid var(--primary-text-color);
 
   margin-bottom: 20px;
+  list-style-image: url('./images/symbol-defs-optimiz.svg#icon-check-mark');
 }
 .about-list__item {
   font-size: 14px;
@@ -41,6 +41,7 @@
   text-align: left;
 
   margin-bottom: 20px;
+  display: flex;
 }
 
 .about__text {
@@ -65,5 +66,10 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.66;
-  color: var(--orange-color);
+  color: var(--second-color);
+}
+
+.about__icon {
+  width: 17px;
+  height: 14px;
 }

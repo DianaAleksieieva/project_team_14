@@ -2,6 +2,16 @@
   background-color: var(--white-color);
   color: var(--black-color);
   padding-top: 40px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media screen and (min-width: 1394px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
 }
 .about__title {
   margin-bottom: 20px;
@@ -31,7 +41,8 @@
   border-top: 1px solid var(--primary-text-color);
 
   margin-bottom: 20px;
-  list-style-image: url('./images/symbol-defs-optimiz.svg#icon-check-mark');
+
+  display: inline;
 }
 .about-list__item {
   font-size: 14px;
@@ -42,6 +53,7 @@
 
   margin-bottom: 20px;
   display: flex;
+  flex-direction: row;
 }
 
 .about__text {
@@ -72,4 +84,5 @@
 .about__icon {
   width: 17px;
   height: 14px;
+  margin-right: 8px;
 }

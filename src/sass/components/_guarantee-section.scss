@@ -28,6 +28,8 @@
   letter-spacing: 0em;
   text-align: left;
   color: var(--secondary-text-color);
+
+  position: relative;
 }
 
 .guarantee__item:not(:last-child) {
@@ -36,4 +38,22 @@
 
 .guarantee__text-accent {
   color: var(--second-color);
+}
+
+.guarantee-box__fire {
+  position: absolute;
+  width: 14px;
+  height: 92px;
+  top: -5px;
+  left: -28px;
+  border: none;
+}
+.guarantee__icon-fire {
+  width: 14px;
+  height: 20px;
+}
+.guarantee__icon-line {
+  width: 1px;
+  height: 68px;
+  margin-left: 5px;
 }

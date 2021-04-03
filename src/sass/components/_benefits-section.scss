@@ -11,9 +11,12 @@
   @media screen and (min-width: 1394px) {
     top: -183px;
   }
+  &__title {
+  }
   &__main-wraper {
     background: var(--white-color);
   }
+
   &__counter-list {
     counter-reset: section;
     font-size: 14px;

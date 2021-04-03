@@ -9,6 +9,8 @@
   @media screen and (min-width: 768px) {
     padding-top: 171px;
     padding-bottom: 65px;
+    display: flex;
+    justify-content: center;
   }
 
   @media screen and (min-width: 1394px) {
@@ -138,12 +140,12 @@
   }
 }
 
-.hero-wrapper {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: center;
-  }
-}
+// .hero-wrapper {
+//   @media screen and (min-width: 768px) {
+//     display: flex;
+//     justify-content: center;
+//   }
+// }
 
 .hero-content {
   display: flex;

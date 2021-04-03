@@ -15,11 +15,20 @@
 
 .guarantee__list--box {
   background-color: var(--reviews-bg-color);
+
+  @media screen and (min-width: 768px) {
+    background-color: var(--white-color);
+  }
 }
 
 .guarantee__list {
   padding-top: 30px;
   padding-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    background-color: var(--reviews-bg-color);
+    padding-right: 50px;
+    padding-left: 100px;
+  }
 }
 .guarantee__item {
   font-size: 12px;
@@ -28,6 +37,11 @@
   letter-spacing: 0em;
   text-align: left;
   color: var(--secondary-text-color);
+
+  @media screen and (min-width: 1394px) {
+    font-size: 20px;
+    line-height: 1.4;
+  }
 
   position: relative;
 }
@@ -47,6 +61,10 @@
   top: -5px;
   left: -28px;
   border: none;
+
+  @media screen and (min-width: 768px) {
+    left: -32px;
+  }
 }
 .guarantee__icon-fire {
   width: 14px;

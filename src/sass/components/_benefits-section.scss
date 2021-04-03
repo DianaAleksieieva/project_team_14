@@ -1,0 +1,33 @@
+.benefits-section {
+  position: absolute;
+  top: -500px;
+  outline: teal;
+  background: transparent;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    top: -210px;
+  }
+  @media screen and (min-width: 1394px) {
+    top: -183px;
+  }
+  &__main-wraper {
+    background: var(--white-color);
+  }
+  &__counter-list {
+    counter-reset: section;
+    font-size: 14px;
+    font-weight: 700;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+    @media screen and (min-width: 1394px) {
+      font-size: 20px;
+    }
+  }
+
+  &__counter-item::before {
+    color: var(--orange-color);
+    counter-increment: section;
+    content: counters('—', section);
+  }
+}

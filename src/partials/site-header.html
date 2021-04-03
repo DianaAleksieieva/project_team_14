@@ -19,10 +19,10 @@
         <li class="header__list-item"><a href="" class="header_link">Контакты</a></li>
       </ul>
 
-      <button class="consultation-button" type="submit">Консультация по телефону</button>
+      <button class="consultation_button" type="submit">Консультация по телефону</button>
 
       <button
-        class="menu-toggle js-open-menu"
+        class="menu_toggle js-open-menu"
         type="button"
         aria-expanded="false"
         aria-controls="mobile-menu"
@@ -35,40 +35,30 @@
   </div>
 </header>
 
-<!-- <div class="menu-container js-menu-container" id="mobile-menu">
+<div class="menu_container js-menu-container" id="mobile-menu">
+  <div class="menu__logo">
+    <a href="" class="logo"
+      >Hell<svg class="logo_icon" aria-label="иконка логотипа">
+        <use href="./images/symbol-defs-optimiz.svg#icon-campfire-small"></use></svg
+      >EN</a
+    >
+    <p class="logo_text">Адский английский</p>
+  </div>
 
-    <div class="header__logo">
-        <a href="./index.html" class="logo">Hell                    
-            <svg class="header__icon" width=10px height=16px>
-                <use href="./images/sprite.svg#fire" width=10px height=16px>
-                </use>                        
-                </svg>EN <br />
-                адский английский
-        </a>
-    </div>
-    
-    
-    
-    <button class="menu-toggle js-close-menu">
-        <svg 
-            width=14.5px 
-            height=14.5px
-            aria-label="Переключатель мобильного меню"
-            >
-            <use href="./images/symbol-defs-optimiz.svg#icon-close"></use>
-        </svg>
-    </button>
-               
-    <div class="mobile-menu__list">
-        <ul class="mobile-menu__chapters">                    
-            <li class="header__chapters-item">Программы обучения</li>
-            <li class="header__chapters-item">О нас</li>
-            <li class="header__chapters-item">Варианты обучения</li>
-            <li class="header__chapters-item">Контакты</li>
-        </ul>
-    </div>
-    
-    <button class="consultation-button" type="submit">Консультация по телефону
-    </button>
-    
-</div> -->
+  <button class="menu_toggle js-close-menu">
+    <svg width="14.5px" height="14.5px" aria-label="Переключатель мобильного меню">
+      <use href="./images/symbol-defs-optimiz.svg#icon-close"></use>
+    </svg>
+  </button>
+
+  <div class="mobile_menu__list">
+    <ul class="mobile_menu__chapters">
+      <li class="mobile_menu-item"><a href="" class="menu_link">Программы обучения</a></li>
+      <li class="mobile_menu-item"><a href="" class="menu_link menu_link-current">О нас</a></li>
+      <li class="mobile_menu-item"><a href="" class="menu_link">Варианты обучения</a></li>
+      <li class="mobile_menu-item"><a href="" class="menu_link">Контакты</a></li>
+    </ul>
+  </div>
+
+  <button class="consultation_button" type="submit">Консультация по телефону</button>
+</div>

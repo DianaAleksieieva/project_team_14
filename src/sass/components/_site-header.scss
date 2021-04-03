@@ -49,7 +49,7 @@
 .header_link--current {
   color: var(--second-color);
 }
-.consultation-button {
+.consultation_button {
   border: 2px solid var(--second-color);
   padding: 16px 5px 17px;
   display: flex;
@@ -62,7 +62,7 @@
   background-color: var(--white-color);
   color: var(--second-color);
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 
@@ -71,15 +71,73 @@
   }
 }
 
-.menu-toggle {
-  display: inline-block;
+.menu_toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 20.5px;
   height: 12px;
   border: 0;
   padding: 0;
   margin: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 
   @media screen and (min-width: 1394px) {
     display: none;
   }
+}
+
+.menu_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 35px 20px;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background: rgba(17, 21, 24, 0.9);
+  z-index: 999;
+  transform: translateX(100%);
+  @include transition(transform);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+  & .menu_toggle {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    color: var(--white-color);
+  }
+
+  & .logo,
+  & .logo_text {
+    color: var(--white-color);
+  }
+}
+.mobile_menu__list {
+  margin-top: 50px;
+}
+.mobile_menu__chapters {
+  padding: 0;
+  margin: 0;
+}
+.mobile_menu-item {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1, 80;
+  letter-spacing: 0.03em;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.menu_link {
+  color: var(--white-color);
+}
+.menu_link-current {
+  color: var(--second-color);
 }

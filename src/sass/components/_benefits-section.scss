@@ -1,8 +1,9 @@
 .benefits-section {
-  position: absolute;
+  float: top;
   top: -500px;
   outline: teal;
   background: transparent;
+  float: top;
   @media screen and (min-width: 768px) {
     display: flex;
     top: -210px;

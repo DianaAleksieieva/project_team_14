@@ -11,6 +11,11 @@
 
   margin-top: 50px;
   margin-bottom: 30px;
+
+  @media screen and (min-width: 1394px) {
+    margin-top: 137px;
+    margin-bottom: 50px;
+  }
 }
 
 .guarantee__list--box {
@@ -24,10 +29,17 @@
 .guarantee__list {
   padding-top: 30px;
   padding-bottom: 30px;
+
   @media screen and (min-width: 768px) {
     background-color: var(--reviews-bg-color);
     padding-right: 50px;
     padding-left: 100px;
+  }
+  @media screen and (min-width: 1394px) {
+    margin-top: 50px;
+    margin-bottom: 45px;
+    padding-right: 112px;
+    padding-left: 162px;
   }
 }
 .guarantee__item {
@@ -63,12 +75,21 @@
   border: none;
 
   @media screen and (min-width: 768px) {
-    left: -32px;
+    left: -31px;
+  }
+
+  @media screen and (min-width: 1394px) {
+    left: -41px;
   }
 }
 .guarantee__icon-fire {
   width: 14px;
   height: 20px;
+
+  @media screen and (min-width: 1394px) {
+    width: 22px;
+    height: 30px;
+  }
 }
 .guarantee__icon-line {
   width: 1px;

@@ -5,12 +5,10 @@
 
   @media screen and (min-width: 768px) {
     padding-top: 50px;
-    padding-bottom: 50px;
   }
 
   @media screen and (min-width: 1394px) {
     padding-top: 130px;
-    padding-bottom: 130px;
   }
 }
 .about__title {
@@ -55,6 +53,7 @@
 @media screen and (min-width: 1394px) {
   .about__box {
     margin-left: 30px;
+    width: 641px;
   }
 }
 .about__name {

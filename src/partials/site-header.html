@@ -1,6 +1,65 @@
-<div class="logo_conteiner">
-    <a href="" class="logo">Hell<svg class="logo_icon" aria-label="иконка логотипа">
-            <use href="./images/symbol-defs-optimiz.svg#icon-campfire-small"></use>
-        </svg>EN</a>
+<header class="header">
+  <div class="container header__container">
+    <nav class="header__nav">
+      <div class="header__logo">
+        <a href="" class="logo"
+          >Hell<svg class="logo_icon" aria-label="иконка логотипа">
+            <use href="./images/symbol-defs-optimiz.svg#icon-campfire-small"></use></svg
+          >EN</a
+        >
+        <p class="logo_text"><span class="logo_text--orange">Адский</span> английский</p>
+      </div>
+
+      <ul class="header__list">
+        <li class="header__list-item"><a href="" class="header_link">Программы обучения</a></li>
+        <li class="header__list-item">
+          <a href="" class="header_link header_link--current">О нас</a>
+        </li>
+        <li class="header__list-item"><a href="" class="header_link">Варианты обучения</a></li>
+        <li class="header__list-item"><a href="" class="header_link">Контакты</a></li>
+      </ul>
+
+      <button class="consultation_button" type="submit">Консультация по телефону</button>
+
+      <button
+        class="menu_toggle js-open-menu"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="20.5" height="12" paria-label="Переключатель мобильного меню">
+          <use class="menu_icon" href="./images/symbol-defs-optimiz.svg#icon-menu"></use>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="menu_container js-menu-container" id="mobile-menu">
+  <div class="menu__logo">
+    <a href="" class="logo"
+      >Hell<svg class="logo_icon" aria-label="иконка логотипа">
+        <use href="./images/symbol-defs-optimiz.svg#icon-campfire-small"></use></svg
+      >EN</a
+    >
     <p class="logo_text"><span class="logo_text--orange">Адский</span> английский</p>
+  </div>
+
+  <button class="menu_toggle js-close-menu">
+    <svg width="14.5px" height="14.5px" aria-label="Переключатель мобильного меню">
+      <use href="./images/symbol-defs-optimiz.svg#icon-close"></use>
+    </svg>
+  </button>
+
+  <div class="mobile_menu__list">
+    <ul class="mobile_menu__chapters">
+      <li class="mobile_menu-item"><a href="" class="menu_link">Программы обучения</a></li>
+      <li class="mobile_menu-item"><a href="" class="menu_link menu_link-current">О нас</a></li>
+      <li class="mobile_menu-item"><a href="" class="menu_link">Варианты обучения</a></li>
+      <li class="mobile_menu-item"><a href="" class="menu_link">Контакты</a></li>
+    </ul>
+  </div>
+  <div class="mobile_button-conteiner">
+    <button class="mobile_button-mod" type="submit">Консультация по телефону</button>
+  </div>
 </div>

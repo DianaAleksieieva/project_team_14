@@ -1,38 +1,44 @@
-
 .advantages-section {
     padding-top: 30px;
     padding-bottom: 50px;
-    padding-left: 52px;
-    padding-right: 52px;
+    // padding-left: 52px;
+    // padding-right: 52px;
 
     @media screen and (min-width: 768px){
         padding-top: 50px;
         padding-bottom: 50px;
-        padding-left: 40px;
-        padding-right: 40px;
+        // padding-left: 40px;
+        // padding-right: 40px;
     }
 
     @media screen and (min-width: 1394px) {
         padding-top: 96.5px;
         padding-bottom: 130px;
-        padding-left: 40px;
-        padding-right: 40px;
+        // padding-left: 40px;
+        // padding-right: 40px;
     }
 
     @media screen and (min-width: 1680px) {
         padding-top: 96.5px;
         padding-bottom: 130px;
-        padding-left: 183px;
-        padding-right: 183px;
+        // padding-left: 183px;
+        // padding-right: 183px;
     }
 }
 
 .advantages-list {
     list-style: none;
+    margin: 0;
+    margin-left: 32px;
+    margin-right: 32px;
+    
     @media screen and (min-width: 768px) {
         display: flex;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
+
 
 .advantages-list__item {
     padding: 0;
@@ -46,7 +52,7 @@
     position: relative;
 
         @media screen and (min-width: 768px){
-            flex-basis: calc(100%/3-21px);
+            flex-basis: calc(100%/3 - 21px);
             margin-right: 21px; 
             margin-bottom: 0px;
             }
@@ -66,21 +72,19 @@
         }
     }
 
-    &::before {
-        content: '';        
-        position: absolute;
-
-        width: 58.82px;
-        height: 60px;
-
-        border: solid 2px var(--second-color);
-
-         @media screen and (min-width: 1394px){
-            width: 97.77px;
-            height: 102px;
-        }
-    }    
 }
+
+
+.advantages-list__icon {
+        
+    position: absolute;
+
+        @media screen and (min-width: 1394px){
+        width: 97.77px;
+        height: 102px;
+        }
+}
+
 
 .advantages-list__title {
     font-family: 'Montserrat', sans-serif;

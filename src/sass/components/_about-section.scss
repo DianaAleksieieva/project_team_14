@@ -1,7 +1,7 @@
 .about-container {
   background-color: var(--white-color);
   color: var(--black-color);
-  padding-top: 40px;
+  padding-top: 270px;
 
   @media screen and (min-width: 768px) {
     padding-top: 50px;
@@ -106,6 +106,21 @@
   }
 }
 
+.about-list__item {
+  position: relative;
+}
+
+.about-list__item:last-child::before {
+  position: absolute;
+  color: var(--second-color);
+  content: '—';
+  top: 60px;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
 .about__text {
   font-weight: 500;
   font-size: 12px;
@@ -147,7 +162,13 @@
 }
 
 .about__icon {
-  width: 24px;
-  height: 20px;
-  margin-right: 34px;
+  width: 17px;
+  height: 14px;
+  margin-right: 8px;
+
+  @media screen and (min-width: 1394px) {
+    width: 24px;
+    height: 20px;
+    margin-right: 34px;
+  }
 }

@@ -91,8 +91,27 @@
     height: 30px;
   }
 }
-.guarantee__icon-line {
+
+.guarantee__item:not(:last-child)::before {
+  content: '';
+
+  position: absolute;
+  top: 18px;
+  left: -22px;
   width: 1px;
-  height: 68px;
-  margin-left: 5px;
+  height: 67px;
+
+  background-image: url('../images/vector-mob.svg');
+
+  @media screen and (min-width: 768px) {
+    height: 30px;
+    top: 22px;
+    left: -25px;
+  }
+
+  @media screen and (min-width: 1394px) {
+    height: 40px;
+    top: 30px;
+    left: -30px;
+  }
 }

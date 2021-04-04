@@ -1,11 +1,10 @@
 .benefits-section {
-  float: top;
+  position: abslute;
   top: -500px;
   outline: teal;
   margin-bottom: 50px;
   background: transparent;
-  // background: black;
-  float: top;
+
   @media screen and (min-width: 768px) {
     top: -210px;
   }
@@ -14,7 +13,6 @@
   }
   &__title {
     @media screen and (min-width: 1394px) {
-      position: absolute;
       width: 1px;
       height: 1px;
       margin: -1px;

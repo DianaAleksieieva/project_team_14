@@ -1,7 +1,11 @@
 .header {
+
   position: absolute;
   top: 0;
   left: 0;
+
+  // width: 100vw;
+
   margin-top: 30.5px;
   margin-bottom: 50.5px;
 
@@ -11,8 +15,8 @@
   }
 }
 .header__logo {
-  @media screen and (max-width: 1394px) {
-    margin-right: 180px;
+  @media screen and (min-width: 768px) and (max-width: 1394px) {
+    margin-right: 170px;
   }
 }
 .header__container {
@@ -46,14 +50,22 @@
 .header__list-item:not(:last-child) {
   margin-right: 40px;
 }
+
 .header_link {
   color: var(--primary-text-color);
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--second-color);
+  }
 }
-.header_link--current {
-  color: var(--second-color);
-}
+
+// .header_link--current {
+//   color: var(--second-color);
+// }
+
 .consultation_button {
-  border: 2px solid var(--second-color);
   padding: 16px 5px 17px;
   display: flex;
   font-weight: 700;
@@ -62,10 +74,20 @@
   text-align: center;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  border: 2px solid var(--second-color);
+  cursor: pointer;
   background-color: var(--white-color);
   color: var(--second-color);
+  @include transition(color);
+  @include transition(background-color);
 
-  @media screen and (max-width: 768px) {
+  &:hover,
+  &:focus {
+    background-color: var(--second-color);
+    color: var(--white-color);
+  }
+
+  @media screen and (max-width: 767px) {
     display: none;
   }
 
@@ -154,12 +176,21 @@
     margin-bottom: 20px;
   }
 }
+
 .menu_link {
   color: var(--white-color);
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--second-color);
+  }
 }
-.menu_link-current {
-  color: var(--second-color);
-}
+
+// .menu_link-current {
+//   color: var(--second-color);
+// }
+
 .mobile_button-conteiner {
   text-align: center;
 
@@ -167,6 +198,7 @@
     display: none;
   }
 }
+
 .mobile_button-mod {
   max-width: 260px;
   margin-top: 50px;
@@ -179,4 +211,12 @@
   border: 2px solid var(--second-color);
   background: rgba(17, 21, 24, 0.9);
   color: var(--second-color);
+  @include transition(color);
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--second-color);
+    color: var(--white-color);
+  }
 }

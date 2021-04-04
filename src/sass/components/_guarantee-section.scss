@@ -29,6 +29,7 @@
 .guarantee__list {
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-bottom: 0;
 
   @media screen and (min-width: 768px) {
     background-color: var(--reviews-bg-color);
@@ -36,8 +37,8 @@
     padding-left: 100px;
   }
   @media screen and (min-width: 1394px) {
-    margin-top: 50px;
-    margin-bottom: 45px;
+    padding-top: 50px;
+    padding-bottom: 45px;
     padding-right: 112px;
     padding-left: 162px;
   }

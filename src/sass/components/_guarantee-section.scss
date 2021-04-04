@@ -29,6 +29,7 @@
 .guarantee__list {
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-bottom: 0;
 
   @media screen and (min-width: 768px) {
     background-color: var(--reviews-bg-color);
@@ -36,8 +37,8 @@
     padding-left: 100px;
   }
   @media screen and (min-width: 1394px) {
-    margin-top: 50px;
-    margin-bottom: 45px;
+    padding-top: 50px;
+    padding-bottom: 45px;
     padding-right: 112px;
     padding-left: 162px;
   }
@@ -91,8 +92,27 @@
     height: 30px;
   }
 }
-.guarantee__icon-line {
+
+.guarantee__item:not(:last-child)::before {
+  content: '';
+
+  position: absolute;
+  top: 18px;
+  left: -22px;
   width: 1px;
-  height: 68px;
-  margin-left: 5px;
+  height: 67px;
+
+  background-image: url('../images/vector-mob.svg');
+
+  @media screen and (min-width: 768px) {
+    height: 30px;
+    top: 22px;
+    left: -25px;
+  }
+
+  @media screen and (min-width: 1394px) {
+    height: 40px;
+    top: 30px;
+    left: -30px;
+  }
 }

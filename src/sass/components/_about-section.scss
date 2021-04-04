@@ -1,14 +1,14 @@
 .about-container {
   background-color: var(--white-color);
   color: var(--black-color);
-  padding-top: 40px;
+  padding-top: 270px;
 
   @media screen and (min-width: 768px) {
-    padding-top: 50px;
+    padding-top: 302px;
   }
 
   @media screen and (min-width: 1394px) {
-    padding-top: 130px;
+    padding-top: 329px;
   }
 }
 .about__title {
@@ -57,6 +57,7 @@
   }
 }
 .about__name {
+  margin-top: 0;
   font-size: 20px;
   font-weight: 800;
   line-height: 1.2;
@@ -74,10 +75,9 @@
 
 .about-list {
   padding-top: 20px;
+  padding-left: 0;
 
   margin-bottom: 43px;
-
-  display: inline;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 38px;
@@ -104,6 +104,25 @@
   @media screen and (min-width: 1394px) {
     font-size: 16px;
   }
+}
+
+.about-list__item {
+  position: relative;
+}
+
+.about-list__item:last-child::before {
+  position: absolute;
+  color: var(--second-color);
+  content: '—';
+  top: 80px;
+
+  @media screen and (min-width: 768px) {
+    top: 55px;
+  }
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.65;
 }
 
 .about__text {
@@ -147,7 +166,13 @@
 }
 
 .about__icon {
-  width: 24px;
-  height: 20px;
-  margin-right: 34px;
+  width: 17px;
+  height: 14px;
+  margin-right: 8px;
+
+  @media screen and (min-width: 1394px) {
+    width: 24px;
+    height: 20px;
+    margin-right: 34px;
+  }
 }

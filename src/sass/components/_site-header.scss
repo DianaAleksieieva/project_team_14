@@ -1,4 +1,9 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+
   margin-top: 30.5px;
   margin-bottom: 50.5px;
 
@@ -13,6 +18,7 @@
   }
 }
 .header__container {
+  padding: 0;
   height: inherit;
 }
 

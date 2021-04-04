@@ -120,6 +120,9 @@
     padding: 27px 25px;
     max-width: 354px;
   }
+  &:hover {
+    transform: translate3D (30px, 30px, 50px);
+  }
 }
 
 .hero__img {
@@ -137,6 +140,19 @@
 
   @media screen and (min-width: 1698px) {
     max-width: 842px;
+  }
+
+  animation-name: Appearance;
+  animation-duration: 1000ms;
+  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+}
+
+@-webkit-keyframes Appearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

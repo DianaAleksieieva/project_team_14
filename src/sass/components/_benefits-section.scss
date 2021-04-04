@@ -28,7 +28,7 @@
   }
   &__main-wraper {
     background: var(--white-color);
-
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
     @media screen and (min-width: 768px) {
       padding: 30px 90px;
     }
@@ -75,10 +75,11 @@
   &__counter-item::before {
     color: var(--second-color);
     counter-increment: section;
+    font-size: 16px;
     content: '— 0' counter(section);
 
     @media screen and (min-width: 1394px) {
-      font-size: 33px;
+      font-size: 20px;
     }
   }
   &__text {

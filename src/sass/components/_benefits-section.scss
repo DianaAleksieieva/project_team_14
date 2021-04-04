@@ -1,15 +1,17 @@
 .benefits-section {
-  position: abslute;
-  top: -500px;
-  outline: teal;
+  position: absolute;
+  bottom: -239px;
+  right: 0;
+  left: 0;
+
   margin-bottom: 50px;
   background: transparent;
 
   @media screen and (min-width: 768px) {
-    top: -210px;
+    bottom: -259px;
   }
   @media screen and (min-width: 1394px) {
-    top: -183px;
+    bottom: -149px;
   }
   &__title {
     @media screen and (min-width: 1394px) {
@@ -26,7 +28,7 @@
   }
   &__main-wraper {
     background: var(--white-color);
-
+    outline: solid teal;
     @media screen and (min-width: 768px) {
       padding: 30px 90px;
     }

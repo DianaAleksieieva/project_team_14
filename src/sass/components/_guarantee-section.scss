@@ -1,40 +1,98 @@
 .guarantee-container {
-    padding-top: 50px;
-    padding-bottom: 50px;
+}
+
+.guarantee__title {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--black-color);
+
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1394px) {
+    margin-top: 137px;
+    margin-bottom: 50px;
   }
-  
-  .guarantee__title {
-    font-size: 26px;
-    font-weight: 800;
-    line-height: 1.3;
-    letter-spacing: 0.03em;
-    text-align: center;
-    color: var(--black-color);
-  
-    margin-bottom: 30px;
+}
+
+.guarantee__list--box {
+  background-color: var(--reviews-bg-color);
+
+  @media screen and (min-width: 768px) {
+    background-color: var(--white-color);
   }
-  
-  .guarantee__list--box {
+}
+
+.guarantee__list {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
     background-color: var(--reviews-bg-color);
+    padding-right: 50px;
+    padding-left: 100px;
   }
-  
-  .guarantee__list {
-    padding-top: 30px;
-    padding-bottom: 30px;
+  @media screen and (min-width: 1394px) {
+    margin-top: 50px;
+    margin-bottom: 45px;
+    padding-right: 112px;
+    padding-left: 162px;
   }
-  .guarantee__item {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.666;
-    letter-spacing: 0em;
-    text-align: left;
-    color: var(--secondary-text-color);
+}
+.guarantee__item {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.666;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--secondary-text-color);
+
+  @media screen and (min-width: 1394px) {
+    font-size: 20px;
+    line-height: 1.4;
   }
-  
-  .guarantee__item:not(:last-child) {
-    margin-bottom: 25px;
+
+  position: relative;
+}
+
+.guarantee__item:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.guarantee__text-accent {
+  color: var(--second-color);
+}
+
+.guarantee-box__fire {
+  position: absolute;
+  width: 14px;
+  height: 92px;
+  top: -5px;
+  left: -28px;
+  border: none;
+
+  @media screen and (min-width: 768px) {
+    left: -31px;
   }
-  
-  .guarantee__text-accent {
-    color: var(--orange-color);
+
+  @media screen and (min-width: 1394px) {
+    left: -41px;
   }
+}
+.guarantee__icon-fire {
+  width: 14px;
+  height: 20px;
+
+  @media screen and (min-width: 1394px) {
+    width: 22px;
+    height: 30px;
+  }
+}
+.guarantee__icon-line {
+  width: 1px;
+  height: 68px;
+  margin-left: 5px;
+}

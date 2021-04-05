@@ -1,5 +1,4 @@
 .header {
-
   position: absolute;
   top: 0;
   left: 0;
@@ -96,6 +95,7 @@
   }
 }
 
+// Стили для мобильного меню
 .menu_toggle {
   display: flex;
   align-items: center;
@@ -219,4 +219,215 @@
     background-color: var(--second-color);
     color: var(--white-color);
   }
+}
+
+// Стили для модального окна
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 94px 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  @include transition(opacity);
+  overflow-y: auto;
+}
+
+.modal {
+  position: relative;
+  margin: 0 auto;
+  padding: 40px;
+  width: 100%;
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  @media screen and (min-width: 320px) {
+    min-width: 280px;
+    max-width: 440px;
+  }
+
+  @media screen and (min-width: 1394px) {
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    max-width: 528px;
+    max-height: 581px;
+    transform: translate(-50%, -50%) scale(1);
+    @include transition(transform);
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color);
+  cursor: pointer;
+  @include transition(color);
+
+  &:hover {
+    color: var(--second-color);
+  }
+}
+
+.close-btn__icon {
+  background: var(--black-color);
+  height: 18px;
+  width: 18px;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  @media screen and (min-width: 1394px) {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.form-modal {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+}
+
+.form-modal__input-wrap {
+  position: relative;
+}
+
+.form-modal__caption {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--black-color);
+}
+
+.form-modal__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-modal__label {
+  margin-bottom: 4px;
+}
+
+.form-modal__input {
+  width: 100%;
+  padding: 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  @include transition(border);
+
+  &:focus {
+    border: 1px solid var(--second-color);
+    outline: none;
+  }
+}
+
+.form-modal__textarea {
+  width: 100%;
+  padding: 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  &:focus {
+    border: 1px solid var(--second-color);
+    outline: none;
+  }
+}
+
+.form-modal__textarea {
+  padding: 12px 16px;
+  height: 120px;
+  resize: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.form-modal__btn {
+  display: inline-flex;
+  padding: 10px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  background-color: var(--second-color);
+  color: var(--secondary-text-color);
+  border: 0;
+  border-radius: 4px;
+  display: block;
+  padding: 10px 55px 10px 56px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+
+  &:hover,
+  &:focus {
+    background-color: var(--white-color);
+    cursor: pointer;
+  }
+}
+
+.form-modal__policy-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 27px;
+  font-size: 14px;
+  line-height: 1.71;
+
+  @media screen and (min-width: 1394px) {
+    margin-bottom: 26px;
+  }
+}
+
+.form-modal__label--policy {
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+
+  @media screen and (max-width: 1394px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+
+.form-modal__link {
+  margin-left: 3px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+  text-decoration: underline;
 }

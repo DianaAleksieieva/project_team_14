@@ -121,5 +121,8 @@
         <symbol id="icon-Vector-30" viewBox="0 0 2 32">
             <path fill="none" stroke="var(--color1, #b9b9b9)" stroke-width="1.067" d="M1.067 0v32"/>
         </symbol>
+        <symbol id="icon-Ellipse" viewBox="0 0 36 32">
+            <path fill="var(--color1, #ff6b09)" d="M34.284 16c0 8.837-7.675 16-17.142 16S0 24.837 0 16 7.675 0 17.142 0s17.142 7.163 17.142 16z"/>
+        </symbol>
     </defs>
 </svg>

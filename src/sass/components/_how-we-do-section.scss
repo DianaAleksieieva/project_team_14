@@ -54,6 +54,12 @@
 .how-section-list__item {
     padding-top: 30px;
     margin-top: 15px;
+
+    @media screen and (min-width: 340px) {
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+
     height: 280px;
     box-shadow: var(--card-shadow);
 

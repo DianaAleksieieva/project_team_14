@@ -38,21 +38,21 @@
                 Выпуск 2015-го года, Національний університет біоресурсів і природокористування
                 України
               </p>
+              <input type="checkbox" class="read-more__checkbox" id="comment-1" />
               <p class="reviews__text">
                 За короткий час занять з Оленою я опанувала граматику і поповнила свій зовсім пустий
                 словниковий запас. З першого ж заняття я зрозуміла, що знаходжуся у своїй тарілці.
                 Ми з Оленою стали друзями, тому що її справді хвилювала моя успішність. Вона стала
                 для мене авторитетом, проте я не тремтіла на уроках, маючи страх зробити найменшу
-                помилку. Зараз я можу похизуватись тим, що я студен...12312
+                помилку. Зараз я можу похизуватись тим, що я студен<span class="read-more__wrapped"
+                  >тка lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laborum neque
+                  molestias sint, quis aliquid amet
+                </span>
               </p>
-              <!-- <details>
-              <summary>... Читать дальше</summary>
-              text text text text text text text text text
-            </details> -->
+              <label for="comment-1" class="read-more__trigger"></label>
             </div>
           </article>
         </li>
-
         <li class="reviews__item">
           <article class="reviews__card">
             <div class="reviews__link-container">
@@ -77,17 +77,57 @@
                 Выпуск 2015-го года, Національний університет біоресурсів і природокористування
                 України
               </p>
+              <input type="checkbox" class="read-more__checkbox" id="comment-1" />
               <p class="reviews__text">
                 За короткий час занять з Оленою я опанувала граматику і поповнила свій зовсім пустий
                 словниковий запас. З першого ж заняття я зрозуміла, що знаходжуся у своїй тарілці.
                 Ми з Оленою стали друзями, тому що її справді хвилювала моя успішність. Вона стала
                 для мене авторитетом, проте я не тремтіла на уроках, маючи страх зробити найменшу
-                помилку. Зараз я можу похизуватись тим, що я студен...12312
+                помилку. Зараз я можу похизуватись тим, що я студен<span class="read-more__wrapped"
+                  >тка lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laborum neque
+                  molestias sint, quis aliquid amet
+                </span>
               </p>
-              <!-- <details>
-              <summary>... Читать дальше</summary>
-              text text text text text text text text text
-            </details> -->
+              <label for="comment-1" class="read-more__trigger"></label>
+            </div>
+          </article>
+        </li>
+        <li class="reviews__item">
+          <article class="reviews__card">
+            <div class="reviews__link-container">
+              <div class="reviews__image-thumb">
+                <img
+                  src="./images/reviews-photos/reviews-photo1-tablet.jpg"
+                  alt=""
+                  class="reviews__photo"
+                  width="150"
+                  height="150"
+                />
+              </div>
+              <a href="#" class="reviews__social-link" rel="noopener noreferrer">
+                <svg width="30" height="30" class="reviews__social-icon">
+                  <use href="./images/symbol-defs-optimiz.svg#icon-vk-icon"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="reviews__text-container">
+              <p class="reviews__name">Тоня Кучеровская</p>
+              <p class="reviews__subtitle">
+                Выпуск 2015-го года, Національний університет біоресурсів і природокористування
+                України
+              </p>
+              <input type="checkbox" class="read-more__checkbox" id="comment-1" />
+              <p class="reviews__text">
+                За короткий час занять з Оленою я опанувала граматику і поповнила свій зовсім пустий
+                словниковий запас. З першого ж заняття я зрозуміла, що знаходжуся у своїй тарілці.
+                Ми з Оленою стали друзями, тому що її справді хвилювала моя успішність. Вона стала
+                для мене авторитетом, проте я не тремтіла на уроках, маючи страх зробити найменшу
+                помилку. Зараз я можу похизуватись тим, що я студен<span class="read-more__wrapped"
+                  >тка lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laborum neque
+                  molestias sint, quis aliquid amet
+                </span>
+              </p>
+              <label for="comment-1" class="read-more__trigger"></label>
             </div>
           </article>
         </li>
@@ -139,6 +179,12 @@
       swipeToSlide: true,
       asNavFor: '.pagination__slider',
       adaptiveHeight: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {},
+        },
+      ],
     });
 
     $('.review__left').click(function () {
@@ -161,7 +207,7 @@
       variableWidth: true,
       asNavFor: '.reviews__slider',
       focusOnSelect: true,
-      centerMode: true,
+      centerMode: false,
       mobileFirst: true,
       responsive: [
         {

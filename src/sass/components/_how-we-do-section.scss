@@ -52,13 +52,13 @@
 }
 
 .how-section-list__item {
-    padding-top: 98px;
+    padding-top: 30px;
     margin-top: 15px;
     height: 280px;
     box-shadow: var(--card-shadow);
 
     @media screen and (min-width: 768px) {
-        padding-top: 118px;
+        padding-top: 40px;
         padding-right: 20px;
         padding-left: 20px;
         height: 334px;
@@ -88,10 +88,15 @@
     &:hover .how-section-list__title,
     &:hover .how-section-list__text,
     &:active .how-section-list__title,
-    &:active .how-section-list__text {
+    &:active .how-section-list__text,
+    &:active .how-section__icon,
+    &:hover .how-section__icon,
+    &:hover .how-section-list__text::before,
+    &:active .how-section-list__text::before{
         color: var(--white-color);
         // этот эффект нужно будет стандартизировать
-        transition: color 450ms cubic-bezier(0.4, 0, 0.2, 1);
+        // transition: color 450ms cubic-bezier(0.4, 0, 0.2, 1);
+        fill: currentColor;
     }
 
 }
@@ -104,6 +109,12 @@
     letter-spacing: 0.08em;
     color: var(--black-color);
 
+    margin-top: 20px;
+
+    @media screen and (min-width: 768px) {
+        margin-top: 30px;
+    }
+
     @media screen and (min-width: 1394px) {
         font-size: 20px;
         line-height: 143%;
@@ -111,6 +122,8 @@
 }
 
 .how-section-list__text {
+    position: relative;
+
     margin-top: 42px;
 
     font-weight: 500;
@@ -120,14 +133,42 @@
     letter-spacing: 0.08em;
     color: var(--primary-text-color);
 
+    &::before {
+        content: '—';
+        position: absolute;
+        left: 50%;
+        top: -30px;
+        font-weight: bold;
+        font-size: 20px;
+        transform: translate(-50%, 0%);
+        color: var(--second-color);
+    }
+
     @media screen and (min-width: 768px){
         margin-top: 52px;
+
+        &::before {
+        top: -35px;
+    }
     }
 
     @media screen and (min-width: 1394px) {
         margin-top: 32px;
         font-size: 18px;
         line-height: 156%;
+
+        &::before {
+        top: -30px;
+        }
     }
 
+}
+
+.how-section__icon-container {
+    display: flex;
+    justify-content: center;
+}
+
+.how-section__icon {
+    fill: var(--second-color);
 }

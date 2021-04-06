@@ -1,0 +1,185 @@
+<section class="reviews">
+  <div class="container">
+    <h2 class="gereral-section-title reviews__section-title">Отзывы выпускников</h2>
+    <div class="slider-container">
+      <button class="review__left">
+        <svg width="25" height="25" class="reviews__social-icon">
+          <use href="./images/symbol-defs-optimiz.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <button class="review__right">
+        <svg width="25" height="25" class="reviews__social-icon">
+          <use href="./images/symbol-defs-optimiz.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+
+      <ul class="reviews__slider">
+        <li class="reviews__item">
+          <article class="reviews__card">
+            <div class="reviews__link-container">
+              <div class="reviews__image-thumb">
+                <img
+                  src="./images/reviews-photos/reviews-photo1-tablet.jpg"
+                  alt=""
+                  class="reviews__photo"
+                  width="150"
+                  height="150"
+                />
+              </div>
+              <a href="#" class="reviews__social-link" rel="noopener noreferrer">
+                <svg width="30" height="30" class="reviews__social-icon">
+                  <use href="./images/symbol-defs-optimiz.svg#icon-vk-icon"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="reviews__text-container">
+              <p class="reviews__name">Тоня Кучеровская</p>
+              <p class="reviews__subtitle">
+                Выпуск 2015-го года, Національний університет біоресурсів і природокористування
+                України
+              </p>
+              <p class="reviews__text">
+                За короткий час занять з Оленою я опанувала граматику і поповнила свій зовсім пустий
+                словниковий запас. З першого ж заняття я зрозуміла, що знаходжуся у своїй тарілці.
+                Ми з Оленою стали друзями, тому що її справді хвилювала моя успішність. Вона стала
+                для мене авторитетом, проте я не тремтіла на уроках, маючи страх зробити найменшу
+                помилку. Зараз я можу похизуватись тим, що я студен...12312
+              </p>
+              <!-- <details>
+              <summary>... Читать дальше</summary>
+              text text text text text text text text text
+            </details> -->
+            </div>
+          </article>
+        </li>
+
+        <li class="reviews__item">
+          <article class="reviews__card">
+            <div class="reviews__link-container">
+              <div class="reviews__image-thumb">
+                <img
+                  src="./images/reviews-photos/reviews-photo1-tablet.jpg"
+                  alt=""
+                  class="reviews__photo"
+                  width="150"
+                  height="150"
+                />
+              </div>
+              <a href="#" class="reviews__social-link" rel="noopener noreferrer">
+                <svg width="30" height="30" class="reviews__social-icon">
+                  <use href="./images/symbol-defs-optimiz.svg#icon-vk-icon"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="reviews__text-container">
+              <p class="reviews__name">Тоня Кучеровская</p>
+              <p class="reviews__subtitle">
+                Выпуск 2015-го года, Національний університет біоресурсів і природокористування
+                України
+              </p>
+              <p class="reviews__text">
+                За короткий час занять з Оленою я опанувала граматику і поповнила свій зовсім пустий
+                словниковий запас. З першого ж заняття я зрозуміла, що знаходжуся у своїй тарілці.
+                Ми з Оленою стали друзями, тому що її справді хвилювала моя успішність. Вона стала
+                для мене авторитетом, проте я не тремтіла на уроках, маючи страх зробити найменшу
+                помилку. Зараз я можу похизуватись тим, що я студен...12312
+              </p>
+              <!-- <details>
+              <summary>... Читать дальше</summary>
+              text text text text text text text text text
+            </details> -->
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+
+    <div class="pagination">
+      <button class="pagination__left">
+        <svg width="25" height="25" class="reviews__social-icon">
+          <use href="./images/symbol-defs-optimiz.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <div class="pagination__slider">
+        <div class="pagination__button"></div>
+        <div class="pagination__button"></div>
+        <div class="pagination__button"></div>
+        <div class="pagination__button"></div>
+        <div class="pagination__button"></div>
+        <div class="pagination__button"></div>
+        <div class="pagination__button"></div>
+      </div>
+      <button class="pagination__right">
+        <svg width="25" height="25" class="reviews__social-icon">
+          <use href="./images/symbol-defs-optimiz.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
+
+<script
+  type="text/javascript"
+  src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.reviews__slider').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      swipeToSlide: true,
+      asNavFor: '.pagination__slider',
+      adaptiveHeight: true,
+    });
+
+    $('.review__left').click(function () {
+      $('.reviews__slider').slick('slickPrev');
+    });
+
+    $('.review__right').click(function () {
+      $('.reviews__slider').slick('slickNext');
+    });
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.pagination__slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: false,
+      variableWidth: true,
+      asNavFor: '.reviews__slider',
+      focusOnSelect: true,
+      centerMode: true,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+          },
+        },
+      ],
+    });
+
+    $('.pagination__left').click(function () {
+      $('.pagination__slider').slick('slickPrev');
+    });
+
+    $('.pagination__right').click(function () {
+      $('.pagination__slider').slick('slickNext');
+    });
+  });
+</script>

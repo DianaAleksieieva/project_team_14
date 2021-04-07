@@ -134,9 +134,8 @@
   background: rgba(17, 21, 24, 0.9);
   z-index: 999;
   transform: translateX(100%);
-  transition: transform 250ms var(--timing-function);
-  @include transition(transform);
 
+  @include transition(translateX);
   @media (min-width: 768px) {
     padding: 42px 40px;
   }

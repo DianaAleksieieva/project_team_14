@@ -1,4 +1,4 @@
-<section class="reviews">
+<section class="reviews" id="rewiews">
   <div class="container">
     <h2 class="gereral-section-title reviews__section-title">Отзывы выпускников</h2>
     <div class="slider-container">
@@ -474,75 +474,3 @@
     </div>
   </div>
 </section>
-
-<script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"
-></script>
-
-<script
-  type="text/javascript"
-  src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-></script>
-
-<script type="text/javascript">
-  $(document).ready(function () {
-    $('.reviews__slider').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      swipeToSlide: true,
-      asNavFor: '.pagination__slider',
-      adaptiveHeight: false,
-      accessibility: true,
-      initialSlide: 5,
-    });
-
-    $('.review__left').click(function () {
-      $('.reviews__slider').slick('slickPrev');
-    });
-
-    $('.review__right').click(function () {
-      $('.reviews__slider').slick('slickNext');
-    });
-    $('.reviews__slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
-      $('.comment-checkbox').prop('checked', false);
-    });
-  });
-</script>
-
-<script type="text/javascript">
-  $(document).ready(function () {
-    $('.pagination__slider').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      arrows: false,
-      variableWidth: true,
-      asNavFor: '.reviews__slider',
-      focusOnSelect: true,
-      centerMode: true,
-      mobileFirst: true,
-      initialSlide: 5,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToScroll: 1,
-            slidesToShow: 1,
-          },
-        },
-      ],
-    });
-
-    $('.pagination__left').click(function () {
-      $('.pagination__slider').slick('slickPrev');
-    });
-
-    $('.pagination__right').click(function () {
-      $('.pagination__slider').slick('slickNext');
-    });
-  });
-</script>

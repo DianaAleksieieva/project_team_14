@@ -1,15 +1,13 @@
 .footer {
   padding-top: 30px;
   text-align: center;
-  padding-left: 0;
-  padding-right: 0;
 
   @media screen and (min-width: 768px) {
     padding-top: 0px;
   }
 }
 
-.footer__box {
+.footer__container {
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
@@ -130,14 +128,12 @@
 
 .copyright {
   background-color: var(--black-color);
-  padding: 21px 0px;
+  padding-top: 21px;
+  padding-bottom: 21px;
 
   @media screen and (min-width: 768px) {
-    padding: 22px 40px;
-  }
-  @media screen and (min-width: 1680px) {
-    padding-left: 183px;
-    padding-right: 183px;
+    padding-top: 22px;
+    padding-bottom: 22px;
   }
 }
 

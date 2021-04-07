@@ -44,6 +44,13 @@
 .programm__content {
   display: flex;
   flex-direction: column;
+
+  // &:first-child {
+  //   @media screen and (min-width: 768px) {
+  //     align-items: left;
+  //     justify-content: left;
+  //   }
+  // }
 }
 
 .programm__title {
@@ -246,12 +253,13 @@
 }
 
 .programm__border {
+  margin-top: 6px;
   border-left: 1px solid var(--white-color);
-  height: 1176px;
+  height: 1170px;
   position: absolute;
 
   @media screen and (min-width: 768px) {
-    height: 688px;
+    height: 682px;
   }
 
   @media screen and (min-width: 1394px) {

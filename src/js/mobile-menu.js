@@ -27,3 +27,7 @@
     bodyScrollLock.enableBodyScroll(document.body);
   });
 })();
+
+$( ".mobile_menu-item" ).click(function() {
+ $(".menu_container").removeClass("is-open");
+});

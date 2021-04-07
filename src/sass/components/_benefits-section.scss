@@ -1,0 +1,100 @@
+.benefits-section {
+  position: absolute;
+  bottom: -231px;
+  right: 0;
+  left: 0;
+
+  background: transparent;
+
+  @media screen and (min-width: 768px) {
+    bottom: -270px;
+  }
+  @media screen and (min-width: 1394px) {
+    bottom: -270px;
+  }
+  &__title {
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+      padding-right: 140px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1394px) {
+      text-align: center;
+    }
+    @media screen and (min-width: 1394px) {
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      white-space: nowrap;
+      clip-path: inset(100%);
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+  }
+  &__main-wraper {
+    background: var(--white-color);
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+    @media screen and (min-width: 768px) {
+      padding-top: 30px;
+      padding-bottom: 0px;
+      padding-left: 90px;
+      padding-right: 90px;
+    }
+    @media screen and (min-width: 1394px) {
+      padding: 82px 70px;
+    }
+  }
+
+  &__counter-list {
+    color: var(--black-color);
+    counter-reset: section;
+    font-size: 14px;
+    font-weight: 700;
+    list-style-type: none;
+    padding-bottom: 20px;
+
+    padding-left: 30px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: calc(-1 * 30px);
+      margin-top: calc(-1 * 30px);
+    }
+    @media screen and (min-width: 1394px) {
+      font-size: 20px;
+    }
+  }
+  &__counter-item {
+    @media screen and (max-width: 767px) {
+      padding-top: 20px;
+    }
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 2 - 40px);
+      margin-left: 40px;
+      margin-top: 30px;
+    }
+    @media screen and (min-width: 1394px) {
+      flex-basis: calc(100% / 3 - 40px);
+
+      margin-top: 32px;
+    }
+  }
+
+  &__counter-item::before {
+    color: var(--second-color);
+    counter-increment: section;
+    font-size: 16px;
+    content: '— 0' counter(section);
+
+    @media screen and (min-width: 1394px) {
+      font-size: 20px;
+    }
+  }
+  &__text {
+    margin-top: 26px;
+    margin-bottom: 0px;
+    line-height: 1.43;
+    letter-spacing: 0.08em;
+  }
+}

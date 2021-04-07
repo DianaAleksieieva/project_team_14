@@ -1,0 +1,107 @@
+.advantages-section {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    // padding-left: 52px;
+    // padding-right: 52px;
+
+    @media screen and (min-width: 768px){
+        padding-top: 50px;
+        padding-bottom: 50px;
+        // padding-left: 40px;
+        // padding-right: 40px;
+    }
+
+    @media screen and (min-width: 1394px) {
+        padding-top: 96.5px;
+        padding-bottom: 130px;
+        // padding-left: 40px;
+        // padding-right: 40px;
+    }
+
+    @media screen and (min-width: 1680px) {
+        padding-top: 96.5px;
+        padding-bottom: 130px;
+        // padding-left: 183px;
+        // padding-right: 183px;
+    }
+}
+
+.advantages-list {
+    list-style: none;
+    margin: 0;
+    margin-left: 32px;
+    margin-right: 32px;
+    
+    @media screen and (min-width: 768px) {
+        display: flex;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+
+.advantages-list__item {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    height: 60px;
+
+    margin-bottom: 30px;
+    position: relative;
+
+        @media screen and (min-width: 768px){
+            flex-basis: calc(100%/3 - 21px);
+            margin-right: 21px; 
+            margin-bottom: 0px;
+            }
+
+        @media screen and (min-width: 1394px){
+            height: 102px;
+            flex-basis: calc(100%/3);
+            margin-bottom: 0px;
+            margin-right: 0px; 
+        }
+
+    &:last-child {
+        margin-bottom: 0;
+
+        @media screen and (min-width: 768px){
+        margin-right: 0px; 
+        }
+    }
+
+}
+
+
+.advantages-list__icon {
+        
+    position: absolute;
+
+        @media screen and (min-width: 1394px){
+        width: 97.77px;
+        height: 102px;
+        }
+}
+
+
+.advantages-list__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 143%;
+    align-items: center;
+    letter-spacing: 0.08em;
+    color: var(--black-color);
+    
+    margin: 0;
+    margin-left: 73.82px;
+
+    @media screen and (min-width: 1394px) {
+        font-size: 20px;
+        line-height: 165%;
+
+        margin-left: 76px;
+    }
+}

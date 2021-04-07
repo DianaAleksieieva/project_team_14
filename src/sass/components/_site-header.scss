@@ -1,0 +1,446 @@
+.header {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  @media screen and (min-width: 768px) {
+    top: 40px;
+  }
+}
+
+.header__logo {
+  justify-content: space-between;
+
+  @media screen and (min-width: 1394px) {
+    margin-right: 134px;
+  }
+}
+
+.header__container {
+  height: inherit;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.214;
+}
+
+.header__list {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 1393px) {
+    display: none;
+  }
+}
+
+.header__list-item:not(:last-child) {
+  margin-right: 40px;
+}
+.header_link {
+  color: var(--primary-text-color);
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--second-color);
+  }
+}
+.header_link--current {
+  color: var(--second-color);
+}
+.consultation_button {
+  border: 2px solid var(--second-color);
+  padding: 16px 5px 17px;
+  display: flex;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.214;
+  text-align: center;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 2px solid var(--second-color);
+  cursor: pointer;
+  background-color: var(--white-color);
+  color: var(--second-color);
+  @include transition(color);
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--second-color);
+    color: var(--white-color);
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 239px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.25px;
+    letter-spacing: 0.08em;
+  }
+
+  @media screen and (min-width: 1394px) {
+    padding: 27px 26px 24px 23px;
+    margin-left: 84px;
+    font-size: 14px;
+    line-height: 1.214px;
+    letter-spacing: 0.14em;
+    min-width: 289px;
+  }
+}
+
+// Стили для мобильного меню
+.menu_toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20.5px;
+  height: 12px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  @media screen and (min-width: 1394px) {
+    display: none;
+  }
+}
+
+.menu_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 35px 20px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(17, 21, 24, 0.9);
+  z-index: 999;
+  transform: translateX(100%);
+  @include transition(transform);
+
+  @media (min-width: 768px) {
+    padding: 42px 40px;
+  }
+
+  &.is-open {
+    transform: translateX(0);
+  }
+  & .menu_toggle {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    color: var(--white-color);
+  }
+
+  & .logo,
+  & .logo_text {
+    color: var(--white-color);
+  }
+  & .logo_text--orange {
+    @media (max-width: 768px) {
+      color: var(--white-color);
+    }
+  }
+}
+
+.mobile_menu__list {
+  margin-top: 50px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 72px;
+  }
+}
+
+.mobile_menu__chapters {
+  padding: 0;
+  margin: 0;
+}
+
+.mobile_menu-item {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1, 80;
+  letter-spacing: 0.03em;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.menu_link {
+  color: var(--white-color);
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--second-color);
+  }
+}
+
+.menu_link-current {
+  color: var(--second-color);
+}
+
+.mobile_button-conteiner {
+  text-align: center;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile_button-mod {
+  max-width: 260px;
+  margin-top: 50px;
+  padding: 14px 10px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 2px solid var(--second-color);
+  background: rgba(17, 21, 24, 0.9);
+  color: var(--second-color);
+  @include transition(color);
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--second-color);
+    color: var(--white-color);
+  }
+}
+
+// Стили для модального окна
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  padding: 94px 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  @include transition(opacity);
+  overflow-y: auto;
+}
+
+.modal {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  @media screen and (min-width: 320px) {
+    max-width: 440px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 528px;
+    max-height: 580px;
+    padding: 40px;
+  }
+
+  @media screen and (min-width: 1394px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    @include transition(transform);
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color);
+  cursor: pointer;
+}
+
+.close-btn__icon {
+  fill: var(--black-color);
+  height: 18px;
+  width: 18px;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  @media screen and (min-width: 1394px) {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.form-modal {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+}
+
+.form-modal__input-wrap {
+  position: relative;
+}
+
+.form-modal__caption {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--black-color);
+  @include transition(color);
+  @include transition(background-color);
+}
+
+.form-modal__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-modal__label {
+  margin-bottom: 4px;
+}
+
+.form-modal__input {
+  width: 100%;
+  padding: 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  @include transition(border);
+
+  &:focus {
+    border: 1px solid var(--second-color);
+    outline: none;
+  }
+}
+
+.form-modal__textarea {
+  width: 100%;
+  padding: 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  &:focus {
+    border: 1px solid var(--second-color);
+    outline: none;
+  }
+}
+
+.form-modal__textarea {
+  padding: 12px 16px;
+  height: 120px;
+  resize: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.form-modal__btn {
+  display: inline-flex;
+  padding: 10px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  background-color: var(--second-color);
+  color: var(--white-color);
+  border: 0;
+  border-radius: 4px;
+  display: block;
+  padding: 10px 55px 10px 56px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  @include transition(color);
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--black-color);
+    color: var(--second-color);
+    cursor: pointer;
+  }
+}
+
+.form-modal__policy-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 27px;
+  font-size: 14px;
+  line-height: 1.71;
+
+  @media screen and (min-width: 1394px) {
+    margin-bottom: 26px;
+  }
+}
+
+.form-modal__label--policy {
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+
+  @media screen and (max-width: 1394px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+
+.form-modal__link {
+  margin-left: 3px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+  text-decoration: underline;
+}

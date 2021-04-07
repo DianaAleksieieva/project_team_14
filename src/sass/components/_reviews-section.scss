@@ -190,7 +190,7 @@
   }
 }
 .reviews__text {
-  max-height: 268px;
+  max-height: 264px;
   overflow-y: auto;
   margin: 0;
   font-style: normal;
@@ -201,11 +201,11 @@
   color: var(--secondary-text-color);
 
   @media screen and (min-width: 768px) {
-    max-height: 168px;
+    max-height: 144px;
     text-align: left;
   }
   @media screen and (min-width: 1394px) {
-    max-height: 208px;
+    max-height: 168px;
     font-size: 18px;
     line-height: 28px;
   }

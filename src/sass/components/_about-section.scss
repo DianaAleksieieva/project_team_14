@@ -110,14 +110,18 @@
   position: relative;
 }
 
-.about-list__item:last-child::before {
+.linez::before {
   position: absolute;
   color: var(--second-color);
   content: '—';
-  top: 80px;
+  top: -35px;
 
   @media screen and (min-width: 768px) {
-    top: 55px;
+    top: -33px;
+  }
+
+  @media screen and (min-width: 1394px) {
+    top: -45px;
   }
 
   font-size: 20px;
@@ -126,6 +130,7 @@
 }
 
 .about__text {
+  position: relative;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.66;

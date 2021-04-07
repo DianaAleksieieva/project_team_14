@@ -1,7 +1,12 @@
 .header {
   position: absolute;
+  top: 30px;
+  left: 0;
   z-index: 2;
   width: 100vw;
+  @media screen and (min-width: 768px) {
+    top: 40px;
+  }
 }
 
 .header__logo {
@@ -72,13 +77,13 @@
   @include transition(color);
   @include transition(background-color);
 
+  &:hover,
+  &:focus {
+    background-color: var(--second-color);
+    color: var(--white-color);
+  }
   @media screen and (max-width: 767px) {
     display: none;
-    &:hover,
-    &:focus {
-      background-color: var(--second-color);
-      color: var(--white-color);
-    }
   }
 
   @media screen and (min-width: 768px) {
@@ -153,6 +158,10 @@
     @media (max-width: 768px) {
       color: var(--white-color);
     }
+  }
+
+  @media screen and (min-width: 1394px) {
+    display: none;
   }
 }
 
@@ -232,6 +241,7 @@
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 1000;
   width: 100%;
   height: 100%;
   padding: 94px 15px;
@@ -244,25 +254,27 @@
 .modal {
   position: relative;
   margin: 0 auto;
-  padding: 40px;
-  width: 100%;
+  padding: 30px;
+  padding-top: 40px;
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
   @media screen and (min-width: 320px) {
-    min-width: 280px;
     max-width: 440px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 528px;
+    max-height: 580px;
+    padding: 40px;
   }
 
   @media screen and (min-width: 1394px) {
     position: absolute;
-    z-index: 1000;
     top: 50%;
     left: 50%;
-    max-width: 528px;
-    max-height: 581px;
     transform: translate(-50%, -50%) scale(1);
     @include transition(transform);
   }
@@ -283,15 +295,10 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--white-color);
   cursor: pointer;
-  @include transition(color);
-
-  &:hover {
-    color: var(--second-color);
-  }
 }
 
 .close-btn__icon {
-  background: var(--black-color);
+  fill: var(--black-color);
   height: 18px;
   width: 18px;
 }
@@ -329,6 +336,8 @@
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--black-color);
+  @include transition(color);
+  @include transition(background-color);
 }
 
 .form-modal__field {
@@ -343,7 +352,7 @@
 
 .form-modal__input {
   width: 100%;
-  padding: 12px 42px;
+  padding: 12px 20px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   @include transition(border);
@@ -389,17 +398,20 @@
   letter-spacing: 0.06em;
   text-decoration: none;
   background-color: var(--second-color);
-  color: var(--secondary-text-color);
+  color: var(--white-color);
   border: 0;
   border-radius: 4px;
   display: block;
   padding: 10px 55px 10px 56px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 0 auto;
+  @include transition(color);
+  @include transition(background-color);
 
   &:hover,
   &:focus {
-    background-color: var(--white-color);
+    background-color: var(--black-color);
+    color: var(--second-color);
     cursor: pointer;
   }
 }

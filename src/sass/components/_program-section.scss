@@ -7,29 +7,31 @@
   background-color: var(--black-color);
   background-image: url(../images/programm-mobile-po50.png);
   background-repeat: no-repeat;
-  background-position: right 1200px;
-
-  // @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  //   background-image: url(../images/programm-mobile-op50@2x.png);
-  // }
+  background-position: right 1347px;
+  background-size: auto 137px;
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/programm-mobile-op50@2x.png);
+  }
 
   @media screen and (min-width: 768px) {
     padding-top: 60px;
     padding-bottom: 392px;
     background-image: url(../images/programm-tablet-op50.png);
-    background-position: right 780px;
-    // @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    //   background-image: url(../images/programm-tablet-op50@2x.png);
-    // }
+    background-position: right 785px;
+    background-size: 384px 280px;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/programm-tablet-op50@2x.png);
+    }
   }
 
   @media screen and (min-width: 1394px) {
-    padding: 120px 183px 363px 183px;
+    padding: 120px 40px 363px 40px;
     background-image: url(../images/programm-desktop-op50.png);
-    background-position: left 600px;
-    // @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    //   background-image: url(../images/programm-desktop-op50@2x.png);
-    // }
+    background-position: left 690px;
+    background-size: auto 502px;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/programm-desktop-op50@2x.png);
+    }
   }
 }
 
@@ -37,6 +39,18 @@
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.programm__content {
+  display: flex;
+  flex-direction: column;
+
+  // &:first-child {
+  //   @media screen and (min-width: 768px) {
+  //     align-items: left;
+  //     justify-content: left;
+  //   }
+  // }
 }
 
 .programm__title {
@@ -47,7 +61,6 @@
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--white-color);
-  // position: relative;
 
   @media screen and (min-width: 768px) {
     font-size: 26px;
@@ -58,19 +71,12 @@
   @media screen and (min-width: 1394px) {
     font-size: 46px;
     text-align: left;
-    margin: 0px 0px 100px 0px;
+    margin: 0px 0px 160px 0px;
   }
+}
 
-  // &:after {
-  //   display: block;
-  //   width: 100%;
-  //   content: '';
-  //   border-bottom: 1px solid var(--second-color);
-  //   font-weight: bold;
-  //   // vertical-align: middle;
-  //   position: absolute;
-  //   // margin-right: 6px;
-  // }
+.programm__content {
+  align-items: center;
 }
 
 //многоуровненой список//
@@ -80,21 +86,20 @@
     display: flex;
   }
 
-  // &:before {
-  //   @media screen and (min-width: 1394px) {
-  //     display: inline-block;
-  //     min-width: 1394px;
-  //     max-width: 1680px;
-  //     // width: 100%;
-  //     content: '';
-  //     border-bottom: 1px solid var(--second-color);
-  //     font-weight: bold;
-  //     // vertical-align: middle;
-  //     position: absolute;
-  //     left: 183px;
-  //     // margin-right: 6px;
-  //   }
-  // }
+  &:before {
+    @media screen and (min-width: 1394px) {
+      display: inline-block;
+      min-width: 1394px;
+      width: 100%;
+      content: '';
+      border-bottom: 1px solid var(--white-color);
+      font-weight: bold;
+      // vertical-align: middle;
+      position: absolute;
+      left: 0px;
+      top: 290px;
+    }
+  }
 }
 
 .programm__item-semester {
@@ -132,6 +137,15 @@
     margin-left: 0px;
     width: 240px;
   }
+
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   background-image: url('../images/symbol-defs-optimiz.svg#icon-ellipse');
+  //   top: 10px;
+  //   width: 15px;
+  //   height: 15px;
+  // }
 }
 
 .programm__list-lesson {
@@ -194,13 +208,17 @@
 
   &:before {
     display: inline-block;
-    width: 12px;
+    width: 16px;
     content: '';
-    border-bottom: 1px solid var(--second-color);
+    border-bottom: 1.5px solid var(--second-color);
     font-weight: bold;
     vertical-align: middle;
     position: relative;
     margin-right: 6px;
+    @media screen and (min-width: 1394px) {
+      width: 19px;
+      border-bottom: 1.8px solid var(--second-color);
+    }
   }
 }
 
@@ -210,6 +228,7 @@
   line-height: 1.667;
   letter-spacing: 0.08em;
   color: var(--primary-text-color);
+  width: 176px;
 
   &:first-child {
     margin-top: 5px;
@@ -222,6 +241,7 @@
   @media screen and (min-width: 1394px) {
     font-size: 18px;
     line-height: 1.556;
+    width: 240px;
   }
 }
 
@@ -233,12 +253,13 @@
 }
 
 .programm__border {
+  margin-top: 6px;
   border-left: 1px solid var(--white-color);
-  height: 1162px;
+  height: 1170px;
   position: absolute;
 
   @media screen and (min-width: 768px) {
-    height: 688px;
+    height: 682px;
   }
 
   @media screen and (min-width: 1394px) {
@@ -246,16 +267,43 @@
   }
 }
 
-.dot {
+// .dot {
+//   position: absolute;
+//   @media screen and (min-width: 320px) {
+//     left: -37px;
+//   }
+//   @media screen and (min-width: 768px) {
+//     left: -68px;
+//   }
+//   @media screen and (min-width: 1394px) {
+//     top: -60px;
+//     left: -6px;
+//   }
+// }
+
+.circle {
+  border-radius: 50%;
+  background: var(--second-color);
   position: absolute;
-  @media screen and (min-width: 320px) {
-    left: -37px;
+
+  @media screen and (min-width: 768px) and (max-width: 1393px) {
+    left: -61px;
+    top: 5px;
+    height: 12px;
+    width: 12px;
   }
-  @media screen and (min-width: 678px) {
-    left: -67px;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    left: -31.5px;
+    top: 6px;
+    height: 12px;
+    width: 12px;
   }
+
   @media screen and (min-width: 1394px) {
-    top: -60px;
-    left: -6px;
+    height: 16px;
+    width: 16px;
+    left: -3px;
+    top: -56px;
   }
 }

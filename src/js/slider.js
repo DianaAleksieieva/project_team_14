@@ -33,7 +33,7 @@
       asNavFor: '.reviews__slider',
       focusOnSelect: true,
       centerMode: true,
-      mobileFirst: true,
+      // mobileFirst: true,
       initialSlide: 5,
       responsive: [
         {
